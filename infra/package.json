@@ -1,14 +1,11 @@
 {
-    "name": "deploy-indie",
+    "name": "infra",
     "main": "index.ts",
     "devDependencies": {
-        "@types/mime": "^4.0.0",
-        "@types/node": "^18.19.33",
+        "@types/node": "^18",
         "typescript": "^5.0.0"
     },
     "dependencies": {
-        "@pulumi/aws": "^6.36.0",
-        "@pulumi/awsx": "^2.0.2",
-        "@pulumi/pulumi": "^3.116.1"
+        "@pulumi/pulumi": "^3.113.0"
     }
 }
