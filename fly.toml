@@ -1,4 +1,6 @@
 app = "deploy-indie-a0e6"
+primary_region = "nrt"
+
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = [ ]
@@ -12,9 +14,6 @@ entrypoint = "sh"
 [mounts]
 source = "data"
 destination = "/data"
-
-[env]
-  FLY_REGION = "nrt"
 
 [[services]]
 internal_port = 8_080
