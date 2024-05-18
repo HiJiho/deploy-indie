@@ -133,6 +133,8 @@ jobs:
 
       - name: 🚀 Run Prisma Migrations
         run: npx prisma migrate deploy
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: 🚀 Deploy Staging
         if: ${{ github.ref == 'refs/heads/dev' }}
