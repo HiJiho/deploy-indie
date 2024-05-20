@@ -2,7 +2,6 @@ import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 
 import styles from "./styles/root.module.css";
-// export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
 import { cssBundleHref } from "@remix-run/css-bundle";
 

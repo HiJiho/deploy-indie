@@ -23,3 +23,16 @@
   /* TODO: Move scrollbar into the recessed region? */
   overflow-y: scroll;
 }
+
+.window {
+  margin: 32px;
+  width: 250px;
+}
+
+.fieldRow {
+  justify-content: flex-end;
+}
+
+.pre {
+  max-width: 375px;
+}
