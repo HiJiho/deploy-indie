@@ -24,7 +24,7 @@
     "/public/build"
   ],
   "dependencies": {
-    "@prisma/client": "^4.16.2",
+    "@prisma/client": "^5.14.0",
     "@remix-run/css-bundle": "^2.9.2",
     "@remix-run/node": "^2.9.2",
     "@remix-run/react": "^2.9.2",
