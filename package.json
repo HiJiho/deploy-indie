@@ -74,7 +74,7 @@
     "postcss": "^8.4.38",
     "prettier": "3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "prisma": "^4.16.2",
+    "prisma": "^5.14.0",
     "start-server-and-test": "^2.0.3",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
