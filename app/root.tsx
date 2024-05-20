@@ -1,5 +1,15 @@
-import type { LoaderFunctionArgs } from "@remix-run/node";
+import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
+
+import styles from "./styles/root.module.css";
+// export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+
+import { cssBundleHref } from "@remix-run/css-bundle";
+
+export const links: LinksFunction = () => [
+	...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+];
+
 import {
 	Links,
 	LiveReload,
@@ -9,15 +19,7 @@ import {
 	ScrollRestoration,
 } from "@remix-run/react";
 
-// import { cssBundleHref } from "@remix-run/css-bundle";
-// import type { LinksFunction } from "@remix-run/node"; // or cloudflare/deno
-
 import { getUser } from "~/session.server";
-
-// export const links: LinksFunction = () => [
-// 	...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-// 	// ...
-// ];
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
 	return json({ user: await getUser(request) });
@@ -32,7 +34,7 @@ export default function App() {
 				<Meta />
 				<Links />
 			</head>
-			<body className="h-full">
+			<body className={`h-full ${styles.body}`}>
 				<Outlet />
 				<ScrollRestoration />
 				<Scripts />

@@ -1,0 +1,25 @@
+.main {
+  width: 65rem;
+  margin-left: 240px;
+  margin-bottom: 60px;
+}
+
+.h1 {
+  margin: 12px 0;
+}
+
+.aside {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 8px;
+  display: flex;
+  align-items: stretch;
+}
+
+.treeView {
+  width: 100%;
+  /* TODO: Move scrollbar into the recessed region? */
+  overflow-y: scroll;
+}
