@@ -122,6 +122,14 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
 
+      # healthcheck 때문에 추가
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          cache: npm
+          cache-dependency-path: ./package.json
+          node-version: 18
+
       - name: 👀 Read app name
         uses: SebRollen/toml-action@v1.2.0
         id: app_name
@@ -131,6 +139,10 @@ jobs:
 
       - name: 🎈 Setup Fly
         uses: superfly/flyctl-actions/setup-flyctl@1.5
+      
+      # healthcheck 때문에 추가
+      - name: 🚀 Install Prisma CLI
+        run: npm install prisma
 
       - name: 🚀 Run Prisma Migrations
         run: npx prisma migrate deploy
