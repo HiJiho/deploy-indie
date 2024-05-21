@@ -5,14 +5,6 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 processes = [ ]
 
-# 추가
-[env]
-  LOG_LEVEL = "debug"
-
-# # 추가
-# [deploy]
-#   release_command = "npm run migrate"
-
 [experimental]
 allowed_public_ports = [ ]
 auto_rollback = true

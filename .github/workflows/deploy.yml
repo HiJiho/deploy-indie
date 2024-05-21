@@ -140,14 +140,14 @@ jobs:
       - name: 🎈 Setup Fly
         uses: superfly/flyctl-actions/setup-flyctl@1.5
       
-      # healthcheck 때문에 추가
-      - name: 🚀 Install Prisma CLI
-        run: npm install prisma
+      # # healthcheck 때문에 추가
+      # - name: 🚀 Install Prisma CLI
+      #   run: npm install prisma
 
-      - name: 🚀 Run Prisma Migrations
-        run: npx prisma migrate deploy
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      # - name: 🚀 Run Prisma Migrations
+      #   run: npx prisma migrate deploy
+      #   env:
+      #     DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: 🚀 Deploy Staging
         if: ${{ github.ref == 'refs/heads/dev' }}
