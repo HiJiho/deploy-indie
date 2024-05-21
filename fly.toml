@@ -9,9 +9,9 @@ processes = [ ]
 [env]
   LOG_LEVEL = "debug"
 
-# 추가
-[deploy]
-  release_command = "npm run migrate"
+# # 추가
+# [deploy]
+#   release_command = "npm run migrate"
 
 [experimental]
 allowed_public_ports = [ ]
