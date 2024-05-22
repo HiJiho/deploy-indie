@@ -1,11 +1,13 @@
 app = "deploy-indie-a0e6"
-primary_region = "nrt"
+# primary_region = "nrt"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = [ ]
 
 swap_size_mb = 512
+
+force_https = false
 
 [experimental]
 allowed_public_ports = [ ]
