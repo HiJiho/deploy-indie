@@ -1,9 +1,15 @@
-import * as pulumi from "@pulumi/pulumi";
+// pulumi 설정 파일
+
 import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
+import * as pulumi from "@pulumi/pulumi";
 
-// Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-bucket");
+const instanceId = "i-025fdade0849da781";
+const existingInstance = aws.ec2.Instance.get("existingInstance", instanceId);
 
-// Export the name of the bucket
-export const bucketName = bucket.id;
+// 테스트 스크립트
+const testScript = `
+  #!/bin/bash
+  echo "Hello, World!"  
+`;
+
+
